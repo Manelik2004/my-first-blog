@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="login">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body"><h2>Log in</h2>
+          <form method="post" novalidate>
+            {% csrf_token %}
+            
+            {{ form|crispy }}
+
+            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+            <a href="{% url 'password' %}" class="btn btn-link">Forgot your password?</a>
+ 
+        </form>
+    </div>
+    <a href="{% url '" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+    <link rel="stylesheet" type="text/css" href="">
+</div>
+</div>
+</div>
+{% endblock %}
